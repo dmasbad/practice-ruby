@@ -1,9 +1,9 @@
 class Jam
-  attr_reader
-  def initialize(in_jamtype, in_jamprice, in_stocking)
-    @jamtype = in_jamtype
-    @jamprice = in_jamprice
-    @stocking = in_stocking
+  attr_reader 
+  def initialize(in_opts)
+    @jamtype = in_opts[in_jamtype]
+    @jamprice = n_opts[in_jamprice]
+    @stocking = n_opts[in_stocking]
   end
 
   def jamtype
@@ -11,9 +11,9 @@ class Jam
   end
 end
 
-jam = Jam.new("blackberry", 8.99, "in stock")
+jam = Jam.new({"blackberry", 8.99, "in stock"})
 
 # p jam
 # jam.print_jamtype
-p jam.jamtype
+# p jam.jamtype
 
